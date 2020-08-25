@@ -7,6 +7,7 @@ import ftplib
 import zipfile
 import glob
 import time
+import threading
 from threading import Thread
 from time import sleep
 
@@ -63,6 +64,6 @@ interval_monitor = IntervalRunner(86400.0,automation)
 interval_monitor.start()
 
 
-resposta = input('Começou...\n')
+threading.Event().wait()
 
 
