@@ -20,7 +20,6 @@ from descompactar import unzipefile
 def automation(*args):
     try:
 
-        log()
         #Acessando a classe FTP da biblioteca ftplib
         from ftplib import FTP
 
@@ -54,6 +53,7 @@ def automation(*args):
                 ftp.retrbinary('RETR '+file, fp.write) # save non-directory files (readme, etc.)
         ftp.close() # close ftp connection
         unzipefile()
+        log()
 
     except Exception as e:
         print(e)
