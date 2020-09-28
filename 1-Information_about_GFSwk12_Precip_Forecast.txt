@@ -1,0 +1,31 @@
+GFSwk12_Precip_Forecast -- GeoTiFF (mm/day)
+
+To view the GeoTiff in ArcGIS:
+Go to "Symbology"
+Classify the data
+Exclude the missing value (which is -999.0)
+
+GFS week1 (1-7 days) bias corrected total precipitation
+GFS week2 (8-14 days) bias corrected anomalous precipitation
+The data resolution is: 0.5x0.5 degree
+
+**** More Details about the forecast **************************************
+
+The Global Forecast System (GFS) is a global numerical weather prediction
+computer model run by NOAA/NCEP/EMC.
+
+The forecasts presented here are the GFS Ensemble Forecasts. Bias Corrected
+
+Every day the week-1 and week-2 GFS precipitation ensemble forecasts have been
+corrected with the past N days mean forecast errors, defined as follows: 
+
+Bias1 = 1/N SUM [ Pf (week1) - Po (week1) ] (1) 
+Bias2 = 1/N SUM [ Pf (week2) - Po (week2) ] (2) 
+
+where Pf is the NCEP GFS ensemble week-1 and week-2 precipitation forecasts,
+Po is the observed week-1and week-2 precipitation from CPC daily US and Global
+Unified Precipitation Analysis. N is number of days (e.g. 30 or 7 days). The
+choice of N is somewhat subjective. In general, the mean forecast errors
+calculated from larger N (e.g. 30 days) are more robust than those from the
+smaller N (e.g. 7 days or 1 day). 
+

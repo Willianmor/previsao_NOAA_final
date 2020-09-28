@@ -51,6 +51,7 @@ def automation(*args):
                 continue
             with open(file, 'wb') as fp:
                 ftp.retrbinary('RETR '+file, fp.write) # save non-directory files (readme, etc.)
+            unzipefile()
         ftp.close() # close ftp connection
         unzipefile()
         log()
